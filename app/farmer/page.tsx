@@ -25,6 +25,13 @@ function statusVariant(status: string) {
   return "warning";
 }
 
+function statusLabel(status: string, t: (key: string) => string) {
+  if (status === "Approved") return t("claims.approved");
+  if (status === "Rejected") return t("claims.rejected");
+  if (status === "Voting") return t("claims.voting");
+  return t("claims.pending");
+}
+
 export default function FarmerDashboard() {
   const { t } = useI18n();
   const { user, refresh } = useAuth();
@@ -44,11 +51,11 @@ export default function FarmerDashboard() {
 
   const insuranceLabel = useMemo(() => {
     const staked = user?.stakeAmount ?? 0;
-    if (staked >= 500) return "High Coverage";
-    if (staked >= 100) return "Standard Coverage";
-    if (staked > 0) return "Basic Coverage";
-    return "Not Staked";
-  }, [user?.stakeAmount]);
+    if (staked >= 500) return t("farmer.coverage.high");
+    if (staked >= 100) return t("farmer.coverage.standard");
+    if (staked > 0) return t("farmer.coverage.basic");
+    return t("farmer.coverage.notStaked");
+  }, [t, user?.stakeAmount]);
 
   const stakeProgress = useMemo(() => {
     const staked = user?.stakeAmount ?? 0;
@@ -65,10 +72,12 @@ export default function FarmerDashboard() {
           <CardContent className="space-y-2">
             <div className="flex items-center justify-between">
               <div className="text-sm text-slate-600">{insuranceLabel}</div>
-              <Badge variant={user?.stakeAmount ? "success" : "warning"}>{user?.stakeAmount ?? 0} staked</Badge>
+              <Badge variant={user?.stakeAmount ? "success" : "warning"}>
+                {user?.stakeAmount ?? 0} {t("farmer.staked")}
+              </Badge>
             </div>
             <Progress value={stakeProgress} />
-            <div className="text-xs text-slate-500">Stake target for max coverage: 500</div>
+            <div className="text-xs text-slate-500">{t("farmer.stakeTargetMaxCoverage")}: 500</div>
           </CardContent>
         </Card>
 
@@ -79,10 +88,10 @@ export default function FarmerDashboard() {
           <CardContent>
             <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm">
               <div className="font-medium">{weatherData?.region ?? claimRegion}</div>
-              <div className="text-slate-600">{weatherData?.message ?? "Loading..."}</div>
+              <div className="text-slate-600">{weatherData?.message ?? t("common.loading")}</div>
               <div className="mt-2 flex gap-2">
                 <Button size="sm" variant="outline" onClick={() => mutateWeather()}>
-                  Refresh
+                  {t("common.refresh")}
                 </Button>
               </div>
             </div>
@@ -97,7 +106,7 @@ export default function FarmerDashboard() {
           </CardHeader>
           <CardContent className="space-y-3">
             <div className="text-sm text-slate-600">
-              Pool balance: <span className="font-semibold">{poolData?.pool?.balance ?? 0}</span>
+              {t("pool.balance")}: <span className="font-semibold">{poolData?.pool?.balance ?? 0}</span>
             </div>
             <div className="flex gap-2">
               <Input value={stakeAmount} onChange={(e) => setStakeAmount(e.target.value)} inputMode="numeric" />
@@ -113,7 +122,7 @@ export default function FarmerDashboard() {
                   await Promise.all([mutatePool(), refresh()]);
                 }}
               >
-                Stake
+                {t("pool.stake")}
               </Button>
             </div>
           </CardContent>
@@ -126,25 +135,25 @@ export default function FarmerDashboard() {
           <CardContent className="space-y-3">
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="space-y-1">
-                <Label>Region</Label>
+                <Label>{t("claim.region")}</Label>
                 <Input value={claimRegion} onChange={(e) => setClaimRegion(e.target.value)} />
               </div>
               <div className="space-y-1">
-                <Label>Crop</Label>
+                <Label>{t("claim.crop")}</Label>
                 <Input value={cropType} onChange={(e) => setCropType(e.target.value)} />
               </div>
               <div className="space-y-1">
-                <Label>Requested Amount</Label>
+                <Label>{t("claim.requestedAmount")}</Label>
                 <Input value={requestedAmount} onChange={(e) => setRequestedAmount(e.target.value)} inputMode="numeric" />
               </div>
               <div className="space-y-1">
-                <Label>Evidence Photo</Label>
+                <Label>{t("claim.evidencePhoto")}</Label>
                 <Input type="file" accept="image/*" onChange={(e) => setPhoto(e.target.files?.[0] ?? null)} />
               </div>
             </div>
             <div className="space-y-1">
-              <Label>Notes (optional)</Label>
-              <Textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="Damage details..." />
+              <Label>{t("claim.notesOptional")}</Label>
+              <Textarea value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={t("claim.damageDetailsPlaceholder")} />
             </div>
             <Button
               className="w-full"
@@ -163,7 +172,7 @@ export default function FarmerDashboard() {
                 await mutateClaims();
               }}
             >
-              Submit
+              {t("common.submit")}
             </Button>
           </CardContent>
         </Card>
@@ -175,7 +184,7 @@ export default function FarmerDashboard() {
         </CardHeader>
         <CardContent className="space-y-2">
           {(claimsData?.claims ?? []).length === 0 ? (
-            <div className="text-sm text-slate-600">No claims yet.</div>
+            <div className="text-sm text-slate-600">{t("claims.empty")}</div>
           ) : (
             <div className="space-y-2">
               {(claimsData.claims as any[]).map((c) => (
@@ -184,13 +193,15 @@ export default function FarmerDashboard() {
                     <div className="text-sm font-medium">
                       {c.region} • {c.cropType} • ₹{c.requestedAmount}
                     </div>
-                    <div className="text-xs text-slate-500">Submitted: {new Date(c.submittedAt).toLocaleString()}</div>
+                    <div className="text-xs text-slate-500">
+                      {t("claims.submitted")}: {new Date(c.submittedAt).toLocaleString()}
+                    </div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Badge variant={statusVariant(c.status) as any}>{c.status}</Badge>
+                    <Badge variant={statusVariant(c.status) as any}>{statusLabel(c.status, t)}</Badge>
                     {c.evidencePhotoUrl ? (
                       <a className="text-xs underline" href={c.evidencePhotoUrl} target="_blank" rel="noreferrer">
-                        Photo
+                        {t("claim.photo")}
                       </a>
                     ) : null}
                   </div>

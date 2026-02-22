@@ -34,15 +34,15 @@ export default function AdminDashboard() {
             <div className="text-xl font-semibold">{statsData?.pool?.balance ?? 0}</div>
           </div>
           <div className="rounded-xl border border-slate-200 p-3">
-            <div className="text-xs text-slate-500">Active voters</div>
+            <div className="text-xs text-slate-500">{t("admin.activeVoters")}</div>
             <div className="text-xl font-semibold">{statsData?.stats?.activeVoters ?? 0}</div>
           </div>
           <div className="rounded-xl border border-slate-200 p-3">
-            <div className="text-xs text-slate-500">Avg response (hours)</div>
+            <div className="text-xs text-slate-500">{t("admin.avgResponseHours")}</div>
             <div className="text-xl font-semibold">{statsData?.stats?.avgResponseHours ?? 0}</div>
           </div>
           <div className="rounded-xl border border-slate-200 p-3">
-            <div className="text-xs text-slate-500">Total claims</div>
+            <div className="text-xs text-slate-500">{t("admin.totalClaims")}</div>
             <div className="text-xl font-semibold">{statsData?.stats?.totalClaims ?? 0}</div>
           </div>
         </CardContent>
@@ -51,7 +51,7 @@ export default function AdminDashboard() {
       <div className="grid gap-4 sm:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle>Regional claims map</CardTitle>
+            <CardTitle>{t("admin.regionalClaimsMap")}</CardTitle>
           </CardHeader>
           <CardContent>
             <RegionalClaimsMap points={regionalClaims} />
@@ -100,7 +100,7 @@ export default function AdminDashboard() {
         </CardHeader>
         <CardContent className="space-y-2">
           {(txData?.items ?? []).length === 0 ? (
-            <div className="text-sm text-slate-600">No transactions yet.</div>
+            <div className="text-sm text-slate-600">{t("tx.empty")}</div>
           ) : (
             (txData.items as any[]).map((tx) => (
               <div key={tx.txHash} className="flex flex-col justify-between gap-2 rounded-lg border border-slate-200 p-3 sm:flex-row sm:items-center">

@@ -33,5 +33,70 @@
   "admin.poolUsage": "ಪೂಲ್ ಬಳಕೆ",
   "admin.claimsOverTime": "ಕಾಲಕ್ರಮದಲ್ಲಿ ದಾವೆಗಳು",
   "admin.daoStats": "DAO ಅಂಕಿಅಂಶಗಳು",
-  "admin.txLog": "ವಹಿವಾಟು ಲಾಗ್"
+  "admin.txLog": "ವಹಿವಾಟು ಲಾಗ್",
+
+  "home.tagline": "ಕೃಷಿಕ ಸಮುದಾಯಗಳು ನಿರ್ವಹಿಸುವ ವಿಕೇಂದ್ರಿತ ಬೆಳೆ ವಿಮಾ ನಿಧಿ — DAO ಮತದಾನದ ಮೂಲಕ ವೇಗವಾದ, ಪಾರದರ್ಶಕ ಪರಿಹಾರ (MVP ಸಿಮ್ಯುಲೇಶನ್).",
+  "home.openFarmerDashboard": "ರೈತ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೆರೆಯಿರಿ",
+  "home.openVoterPortal": "DAO ಮತದಾನ ಪೋರ್ಟಲ್ ತೆರೆಯಿರಿ",
+  "home.openAdminDashboard": "ನಿರ್ವಾಹಕ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ತೆರೆಯಿರಿ",
+  "home.feature.stake.title": "ಸ್ಟೇಕ್ → ಮತದಾನ ಶಕ್ತಿ",
+  "home.feature.stake.body": "ಮತದಾನ ಶಕ್ತಿಗಾಗಿ ಪೂಲ್‌ಗೆ ಸ್ಟೇಕ್ ಮಾಡಿ, ಸಮುದಾಯಕ್ಕೆ ಪರಿಹಾರವನ್ನು ವೇಗವಾಗಿ ಅನುಮೋದಿಸಲು ಸಹಾಯ ಮಾಡಿ.",
+  "home.feature.claims.title": "ದಾವೆಗಳು + ಫೋಟೋ ಸಾಕ್ಷ್ಯ",
+  "home.feature.claims.body": "ರೈತರು ಸಾಕ್ಷ್ಯಗಳೊಂದಿಗೆ ದಾವೆ ಸಲ್ಲಿಸುತ್ತಾರೆ. DAO ಪಾರದರ್ಶಕವಾಗಿ ಮತದಾನ ಮಾಡುತ್ತದೆ; ಸಿಮ್ಯುಲೇಟೆಡ್ ಆನ್-ಚೈನ್ ಲಾಗ್‌ನೊಂದಿಗೆ.",
+  "home.feature.analytics.title": "ಪರಿಹಾರ ವಿಶ್ಲೇಷಣೆ",
+  "home.feature.analytics.body": "ಪೂಲ್ ಬಳಕೆ, ಪ್ರಾದೇಶಿಕ ದಾವೆ ಕ್ಲಸ್ಟರ್‌ಗಳು, ಮತ್ತು ನೈಜ ಜಾರಿಗೆ ಪ್ರತಿಕ್ರಿಯಾ ಮಾಪಕಗಳನ್ನು ನಿರ್ವಾಹಕ ನೋಡಬಹುದು.",
+  "home.demoTip": "ಡೆಮೋ ಟಿಪ್: ರಿಜಿಸ್ಟರ್ ಪುಟದಿಂದ ರೈತ, ಮತದಾರ, ನಿರ್ವಾಹಕ ಖಾತೆಗಳನ್ನು ಸೃಷ್ಟಿಸಿ (ಡೆವ್‌ನಲ್ಲಿ ಪಾತ್ರ ಆಯ್ಕೆ ಸಕ್ರಿಯವಾಗಿದೆ).",
+
+  "common.loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+  "common.refresh": "ರಿಫ್ರೆಶ್",
+  "common.submit": "ಸಲ್ಲಿಸಿ",
+  "common.send": "ಕಳುಹಿಸಿ",
+
+  "pool.balance": "ಪೂಲ್ ಶಿಲ್ಕು",
+  "pool.stake": "ಸ್ಟೇಕ್",
+  "pool.totalStaked": "ಒಟ್ಟು ಸ್ಟೇಕ್",
+
+  "farmer.coverage.high": "ಉನ್ನತ ಕವರೆಜ್",
+  "farmer.coverage.standard": "ಮಾನಕ ಕವರೆಜ್",
+  "farmer.coverage.basic": "ಮೂಲಭೂತ ಕವರೆಜ್",
+  "farmer.coverage.notStaked": "ಸ್ಟೇಕ್ ಮಾಡಿಲ್ಲ",
+  "farmer.staked": "ಸ್ಟೇಕ್",
+  "farmer.stakeTargetMaxCoverage": "ಗರಿಷ್ಠ ಕವರೆಜ್‌ಗೆ ಸ್ಟೇಕ್ ಗುರಿ",
+
+  "claim.region": "ಪ್ರದೇಶ",
+  "claim.crop": "ಬೆಳೆ",
+  "claim.requestedAmount": "ವಿನಂತಿಸಿದ ಮೊತ್ತ",
+  "claim.evidencePhoto": "ಸಾಕ್ಷ್ಯ ಫೋಟೋ",
+  "claim.notesOptional": "ಟಿಪ್ಪಣಿಗಳು (ಐಚ್ಛಿಕ)",
+  "claim.damageDetailsPlaceholder": "ಹಾನಿ ವಿವರಗಳು...",
+  "claim.photo": "ಫೋಟೋ",
+  "claim.farmer": "ರೈತ",
+
+  "claims.empty": "ಇನ್ನೂ ಯಾವುದೇ ದಾವೆಗಳು ಇಲ್ಲ.",
+  "claims.submitted": "ಸಲ್ಲಿಸಿದ ಸಮಯ",
+  "claims.nonePending": "ಬಾಕಿ ದಾವೆಗಳು ಇಲ್ಲ.",
+
+  "comments.empty": "ಇನ್ನೂ ಟಿಪ್ಪಣಿಗಳು ಇಲ್ಲ.",
+  "comments.addPlaceholder": "ಟಿಪ್ಪಣಿ ಸೇರಿಸಿ...",
+
+  "voting.votingPowerDescription": "ಸ್ಟೇಕ್ ಆಧಾರಿತ ಮತದಾನ ಶಕ್ತಿ (ರೇಖೀಯ MVP).",
+  "voting.totalPower": "ಒಟ್ಟು ಶಕ್ತಿ",
+
+  "admin.activeVoters": "ಸಕ್ರಿಯ ಮತದಾರರು",
+  "admin.avgResponseHours": "ಸರಾಸರಿ ಪ್ರತಿಕ್ರಿಯೆ (ಗಂಟೆಗಳು)",
+  "admin.totalClaims": "ಒಟ್ಟು ದಾವೆಗಳು",
+  "admin.regionalClaimsMap": "ಪ್ರಾದೇಶಿಕ ದಾವೆಗಳ ನಕ್ಷೆ",
+
+  "tx.empty": "ಇನ್ನೂ ವಹಿವಾಟುಗಳಿಲ್ಲ.",
+
+  "auth.emailPlaceholder": "you@example.com",
+  "auth.namePlaceholder": "ನಿಮ್ಮ ಹೆಸರು",
+  "auth.loginFailed": "ಲಾಗಿನ್ ವಿಫಲವಾಯಿತು",
+  "auth.registerFailed": "ನೋಂದಣಿ ವಿಫಲವಾಯಿತು",
+  "auth.alreadyHaveAccount": "ಈಗಾಗಲೇ ಖಾತೆಯಿದೆಯೆ?",
+  "auth.roleDevOnlyNote": "ಪಾತ್ರ ಆಯ್ಕೆ ಡೆವ್‌ನಲ್ಲಿ ಮಾತ್ರ; ಪ್ರೊಡಕ್ಷನ್‌ನಲ್ಲಿ ಡಿಫಾಲ್ಟ್ ರೈತ.",
+
+  "roles.farmer": "ರೈತ",
+  "roles.voter": "ಮತದಾರ",
+  "roles.admin": "ನಿರ್ವಾಹಕ"
 }

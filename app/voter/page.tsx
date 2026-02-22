@@ -25,6 +25,13 @@ function tally(votes: any[]) {
   return { approve, reject, total, approvePct, rejectPct };
 }
 
+function statusLabel(status: string, t: (key: string) => string) {
+  if (status === "Approved") return t("claims.approved");
+  if (status === "Rejected") return t("claims.rejected");
+  if (status === "Voting") return t("claims.voting");
+  return t("claims.pending");
+}
+
 export default function VotingPortal() {
   const { t } = useI18n();
   const { user } = useAuth();
@@ -47,7 +54,7 @@ export default function VotingPortal() {
           </CardHeader>
           <CardContent className="space-y-1">
             <div className="text-2xl font-semibold">{votingPower}</div>
-            <div className="text-sm text-slate-600">Stake-based voting power (linear MVP).</div>
+              <div className="text-sm text-slate-600">{t("voting.votingPowerDescription")}</div>
           </CardContent>
         </Card>
 
@@ -57,7 +64,9 @@ export default function VotingPortal() {
           </CardHeader>
           <CardContent className="space-y-1">
             <div className="text-2xl font-semibold">{poolData?.pool?.balance ?? 0}</div>
-            <div className="text-sm text-slate-600">Total staked: {poolData?.pool?.totalStaked ?? 0}</div>
+              <div className="text-sm text-slate-600">
+                {t("pool.totalStaked")}: {poolData?.pool?.totalStaked ?? 0}
+              </div>
           </CardContent>
         </Card>
       </div>
@@ -68,7 +77,7 @@ export default function VotingPortal() {
         </CardHeader>
         <CardContent className="space-y-3">
           {pending.length === 0 ? (
-            <div className="text-sm text-slate-600">No pending claims.</div>
+            <div className="text-sm text-slate-600">{t("claims.nonePending")}</div>
           ) : (
             pending.map((c) => {
               const tv = tally(c.votes ?? []);
@@ -79,10 +88,12 @@ export default function VotingPortal() {
                       <div className="text-sm font-medium">
                         {c.region} • {c.cropType} • ₹{c.requestedAmount}
                       </div>
-                      <div className="text-xs text-slate-500">Farmer: {c.farmerName}</div>
+                      <div className="text-xs text-slate-500">
+                        {t("claim.farmer")}: {c.farmerName}
+                      </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Badge variant={c.status === "Voting" ? "info" : "warning"}>{c.status}</Badge>
+                      <Badge variant={c.status === "Voting" ? "info" : "warning"}>{statusLabel(c.status, t)}</Badge>
                       <Button
                         size="sm"
                         onClick={async () => {
@@ -114,7 +125,9 @@ export default function VotingPortal() {
                   </div>
 
                   <div className="mt-3 space-y-2">
-                    <div className="text-xs text-slate-600">Approve: {tv.approvePct}% • Reject: {tv.rejectPct}% • Total power: {tv.total}</div>
+                    <div className="text-xs text-slate-600">
+                      {t("voting.approve")}: {tv.approvePct}% • {t("voting.reject")}: {tv.rejectPct}% • {t("voting.totalPower")}: {tv.total}
+                    </div>
                     <Progress value={tv.approvePct} />
                   </div>
 
@@ -122,7 +135,7 @@ export default function VotingPortal() {
                     <div className="text-sm font-medium">{t("voting.comments")}</div>
                     <div className="mt-2 space-y-2">
                       {(c.comments ?? []).length === 0 ? (
-                        <div className="text-sm text-slate-600">No comments yet.</div>
+                        <div className="text-sm text-slate-600">{t("comments.empty")}</div>
                       ) : (
                         (c.comments as any[]).slice(-3).map((cm, idx) => (
                           <div key={idx} className="rounded-lg bg-slate-50 p-2 text-sm">
@@ -136,7 +149,7 @@ export default function VotingPortal() {
                         <Input
                           value={commentDraft[String(c._id)] ?? ""}
                           onChange={(e) => setCommentDraft((s) => ({ ...s, [String(c._id)]: e.target.value }))}
-                          placeholder="Add a comment..."
+                          placeholder={t("comments.addPlaceholder")}
                         />
                         <Button
                           variant="outline"
@@ -154,7 +167,7 @@ export default function VotingPortal() {
                             }
                           }}
                         >
-                          Send
+                          {t("common.send")}
                         </Button>
                       </div>
                     </div>

@@ -33,5 +33,70 @@
   "admin.poolUsage": "പൂൾ ഉപയോഗം",
   "admin.claimsOverTime": "സമയംക്രമത്തിൽ ക്ലെയിംസ്",
   "admin.daoStats": "DAO സ്റ്റാറ്റിസ്റ്റിക്സ്",
-  "admin.txLog": "ട്രാൻസാക്ഷൻ ലോഗ്"
+  "admin.txLog": "ട്രാൻസാക്ഷൻ ലോഗ്",
+
+  "home.tagline": "കർഷക സമൂഹങ്ങൾ നിയന്ത്രിക്കുന്ന വികേന്ദ്രീകൃത വിള ഇൻഷുറൻസ് ഫണ്ട് — DAO വോട്ടിംഗ് വഴി വേഗവും സുതാര്യവുമായ ആശ്വാസം (MVP സിമുലേഷൻ).",
+  "home.openFarmerDashboard": "കർഷക ഡാഷ്ബോർഡ് തുറക്കുക",
+  "home.openVoterPortal": "DAO വോട്ടിംഗ് പോർട്ടൽ തുറക്കുക",
+  "home.openAdminDashboard": "അഡ്മിൻ ഡാഷ്ബോർഡ് തുറക്കുക",
+  "home.feature.stake.title": "സ്റ്റേക്ക് → വോട്ടിംഗ് പവർ",
+  "home.feature.stake.body": "വോട്ടിംഗ് പവർ നേടാൻ പൂളിൽ സ്റ്റേക്ക് ചെയ്ത്, സമൂഹത്തിന് വേഗത്തിൽ ആശ്വാസം അംഗീകരിക്കാൻ സഹായിക്കുക.",
+  "home.feature.claims.title": "ക്ലെയിംസ് + ഫോട്ടോ തെളിവ്",
+  "home.feature.claims.body": "കർഷകർ തെളിവുകളോടെ ക്ലെയിംസ് സമർപ്പിക്കുന്നു. DAO സിമുലേറ്റഡ് ഓൺ-ചെയ്ൻ ലോഗോടെ സുതാര്യമായി വോട്ട് ചെയ്യുന്നു.",
+  "home.feature.analytics.title": "ആശ്വാസ വിശകലനം",
+  "home.feature.analytics.body": "പൂൾ ഉപയോഗം, മേഖലാ ക്ലെയിം ക്ലസ്റ്ററുകൾ, യഥാർത്ഥ വിന്യാസത്തിന് പ്രതികരണ മെട്രിക്‌സ് എന്നിവ അഡ്മിൻ കാണാം.",
+  "home.demoTip": "ഡെമോ ടിപ്പ്: രജിസ്റ്റർ പേജിൽ നിന്ന് കർഷകൻ, വോട്ടർ, അഡ്മിൻ അക്കൗണ്ടുകൾ സൃഷ്ടിക്കുക (ഡെവിൽ റോൾ സെലക്ഷൻ പ്രവർത്തനക്ഷമമാണ്).",
+
+  "common.loading": "ലോഡ് ചെയ്യുന്നു...",
+  "common.refresh": "റിഫ്രെഷ്",
+  "common.submit": "സമർപ്പിക്കുക",
+  "common.send": "അയയ്ക്കുക",
+
+  "pool.balance": "പൂൾ ബാലൻസ്",
+  "pool.stake": "സ്റ്റേക്ക്",
+  "pool.totalStaked": "മൊത്തം സ്റ്റേക്ക്",
+
+  "farmer.coverage.high": "ഉയർന്ന കവർേജ്",
+  "farmer.coverage.standard": "സ്റ്റാൻഡേർഡ് കവർേജ്",
+  "farmer.coverage.basic": "ബേസിക് കവർേജ്",
+  "farmer.coverage.notStaked": "സ്റ്റേക്ക് ചെയ്തിട്ടില്ല",
+  "farmer.staked": "സ്റ്റേക്ക്",
+  "farmer.stakeTargetMaxCoverage": "പരമാവധി കവർേജിന് സ്റ്റേക്ക് ലക്ഷ്യം",
+
+  "claim.region": "പ്രദേശം",
+  "claim.crop": "വിള",
+  "claim.requestedAmount": "അഭ്യർത്ഥിച്ച തുക",
+  "claim.evidencePhoto": "തെളിവ് ഫോട്ടോ",
+  "claim.notesOptional": "കുറിപ്പുകൾ (ഐച്ഛികം)",
+  "claim.damageDetailsPlaceholder": "നാശനഷ്ട വിശദാംശങ്ങൾ...",
+  "claim.photo": "ഫോട്ടോ",
+  "claim.farmer": "കർഷകൻ",
+
+  "claims.empty": "ഇനിയും ക്ലെയിംസ് ഇല്ല.",
+  "claims.submitted": "സമർപ്പിച്ചത്",
+  "claims.nonePending": "പെൻഡിംഗ് ക്ലെയിംസ് ഇല്ല.",
+
+  "comments.empty": "ഇനിയും അഭിപ്രായങ്ങൾ ഇല്ല.",
+  "comments.addPlaceholder": "ഒരു അഭിപ്രായം ചേർക്കുക...",
+
+  "voting.votingPowerDescription": "സ്റ്റേക്ക് അടിസ്ഥാനത്തിലുള്ള വോട്ടിംഗ് പവർ (ലിനിയർ MVP).",
+  "voting.totalPower": "മൊത്തം പവർ",
+
+  "admin.activeVoters": "സജീവ വോട്ടർമാർ",
+  "admin.avgResponseHours": "ശരാശരി പ്രതികരണം (മണിക്കൂർ)",
+  "admin.totalClaims": "മൊത്തം ക്ലെയിംസ്",
+  "admin.regionalClaimsMap": "മേഖലാ ക്ലെയിംസ് മാപ്പ്",
+
+  "tx.empty": "ഇനിയും ഇടപാടുകൾ ഇല്ല.",
+
+  "auth.emailPlaceholder": "you@example.com",
+  "auth.namePlaceholder": "നിങ്ങളുടെ പേര്",
+  "auth.loginFailed": "ലോഗിൻ പരാജയപ്പെട്ടു",
+  "auth.registerFailed": "രജിസ്റ്റർ പരാജയപ്പെട്ടു",
+  "auth.alreadyHaveAccount": "ഇതിനകം അക്കൗണ്ട് ഉണ്ടോ?",
+  "auth.roleDevOnlyNote": "റോൾ സെലക്ഷൻ ഡെവിൽ മാത്രം; പ്രൊഡക്ഷനിൽ ഡിഫാൾട്ട് കർഷകൻ.",
+
+  "roles.farmer": "കർഷകൻ",
+  "roles.voter": "വോട്ടർ",
+  "roles.admin": "അഡ്മിൻ"
 }

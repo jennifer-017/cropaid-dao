@@ -31,7 +31,7 @@ export default function RegisterPage() {
         <CardContent className="space-y-3">
           <div className="space-y-1">
             <Label htmlFor="name">{t("auth.name")}</Label>
-            <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" />
+            <Input id="name" value={name} onChange={(e) => setName(e.target.value)} placeholder={t("auth.namePlaceholder")} />
           </div>
           <div className="space-y-1">
             <Label htmlFor="email">{t("auth.email")}</Label>
@@ -48,11 +48,11 @@ export default function RegisterPage() {
               value={role}
               onChange={(e) => setRole(e.target.value as any)}
             >
-              <option value="Farmer">Farmer</option>
-              <option value="Voter">Voter</option>
-              <option value="Admin">Admin</option>
+              <option value="Farmer">{t("roles.farmer")}</option>
+              <option value="Voter">{t("roles.voter")}</option>
+              <option value="Admin">{t("roles.admin")}</option>
             </select>
-            <div className="text-xs text-slate-500">Role selection is dev-only; production defaults to Farmer.</div>
+            <div className="text-xs text-slate-500">{t("auth.roleDevOnlyNote")}</div>
           </div>
 
           {error ? <div className="text-sm text-red-600">{error}</div> : null}
@@ -67,7 +67,7 @@ export default function RegisterPage() {
                 await register({ email, name, password, role });
                 router.push("/");
               } catch (e: any) {
-                setError(e?.message ?? "Register failed");
+                setError(e?.message ?? t("auth.registerFailed"));
               } finally {
                 setLoading(false);
               }
@@ -77,7 +77,7 @@ export default function RegisterPage() {
           </Button>
 
           <div className="text-sm text-slate-600">
-            Already have an account?{" "}
+            {t("auth.alreadyHaveAccount")} {" "}
             <Link className="underline" href="/login">
               {t("auth.login")}
             </Link>

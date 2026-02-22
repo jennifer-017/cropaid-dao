@@ -31,7 +31,7 @@ export default function LoginPage() {
         <CardContent className="space-y-3">
           <div className="space-y-1">
             <Label htmlFor="email">{t("auth.email")}</Label>
-            <Input id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@example.com" />
+            <Input id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t("auth.emailPlaceholder")} />
           </div>
           <div className="space-y-1">
             <Label htmlFor="password">{t("auth.password")}</Label>
@@ -50,7 +50,7 @@ export default function LoginPage() {
                 await login({ email, password });
                 router.push(next);
               } catch (e: any) {
-                setError(e?.message ?? "Login failed");
+                setError(e?.message ?? t("auth.loginFailed"));
               } finally {
                 setLoading(false);
               }

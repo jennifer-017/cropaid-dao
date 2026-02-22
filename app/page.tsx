@@ -19,20 +19,20 @@ export default function Home() {
       >
         <h1 className="text-2xl font-semibold sm:text-3xl">{t("app.name")}</h1>
         <p className="text-sm text-slate-600 sm:text-base">
-          A decentralized crop insurance fund governed by farming communities — fast, transparent disaster relief via DAO voting (MVP simulation).
+          {t("home.tagline")}
         </p>
         <div className="flex flex-col gap-2 sm:flex-row">
           <Link href="/farmer">
-            <Button className="w-full sm:w-auto">Open Farmer Dashboard</Button>
+            <Button className="w-full sm:w-auto">{t("home.openFarmerDashboard")}</Button>
           </Link>
           <Link href="/voter">
             <Button variant="secondary" className="w-full sm:w-auto">
-              Open DAO Voting Portal
+              {t("home.openVoterPortal")}
             </Button>
           </Link>
           <Link href="/admin">
             <Button variant="outline" className="w-full sm:w-auto">
-              Open Admin Dashboard
+              {t("home.openAdminDashboard")}
             </Button>
           </Link>
         </div>
@@ -41,32 +41,32 @@ export default function Home() {
       <div className="grid gap-4 sm:grid-cols-3">
         <Card>
           <CardHeader>
-            <CardTitle>Stake → Voting Power</CardTitle>
+            <CardTitle>{t("home.feature.stake.title")}</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-slate-600">
-            Stake into the pool to gain voting power and help the community approve relief faster.
+            {t("home.feature.stake.body")}
           </CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle>Claims + Photo Evidence</CardTitle>
+            <CardTitle>{t("home.feature.claims.title")}</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-slate-600">
-            Farmers submit claims with evidence. The DAO votes transparently with a simulated on-chain log.
+            {t("home.feature.claims.body")}
           </CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle>Relief Analytics</CardTitle>
+            <CardTitle>{t("home.feature.analytics.title")}</CardTitle>
           </CardHeader>
           <CardContent className="text-sm text-slate-600">
-            Admin view of pool usage, regional claim clusters, and response metrics for real-world deployment.
+            {t("home.feature.analytics.body")}
           </CardContent>
         </Card>
       </div>
 
       <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm">
-        Demo tip: create accounts for Farmer, Voter, and Admin from the Register page (role selection is enabled in dev).
+        {t("home.demoTip")}
       </div>
     </div>
   );

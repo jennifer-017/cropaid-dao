@@ -1,0 +1,32 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/layout",{
+
+/***/ "(app-pages-browser)/./app/globals.css":
+/*!*************************!*\
+  !*** ./app/globals.css ***!
+  \*************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+eval(__webpack_require__.ts("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (\"cc15c19393ab\");\nif (true) { module.hot.accept() }\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL2FwcC9nbG9iYWxzLmNzcyIsIm1hcHBpbmdzIjoiO0FBQUEsK0RBQWUsY0FBYztBQUM3QixJQUFJLElBQVUsSUFBSSxpQkFBaUIiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9fTl9FLy4vYXBwL2dsb2JhbHMuY3NzPzQ1NTMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgXCJjYzE1YzE5MzkzYWJcIlxuaWYgKG1vZHVsZS5ob3QpIHsgbW9kdWxlLmhvdC5hY2NlcHQoKSB9XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(app-pages-browser)/./app/globals.css\n"));
+
+/***/ }),
+
+/***/ "(app-pages-browser)/./lib/i18n/messages/te.json":
+/*!***********************************!*\
+  !*** ./lib/i18n/messages/te.json ***!
+  \***********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"app.name":"క్రాప్‌ఎయిడ్ DAO","nav.home":"హోమ్","nav.farmer":"రైతు","nav.voter":"DAO ఓటింగ్","nav.admin":"అడ్మిన్","nav.login":"లాగిన్","nav.logout":"లాగౌట్","auth.email":"ఇమెయిల్","auth.password":"పాస్‌వర్డ్","auth.name":"పేరు","auth.role":"పాత్ర","auth.register":"రిజిస్టర్","auth.login":"లాగిన్","auth.createAccount":"ఖాతా సృష్టించండి","auth.welcomeBack":"మళ్లీ స్వాగతం","farmer.insuranceStatus":"బీమా స్థితి","farmer.stakeIntoPool":"పూల్‌లో స్టేక్ చేయండి","farmer.weatherAlert":"వాతావరణ హెచ్చరిక","farmer.submitClaim":"క్లెయిమ్ సమర్పించండి","farmer.claimTracker":"క్లెయిమ్ స్థితి","claims.pending":"పెండింగ్","claims.voting":"ఓటింగ్","claims.approved":"ఆమోదించబడింది","claims.rejected":"తిరస్కరించబడింది","voting.pendingClaims":"పెండింగ్ క్లెయిమ్స్","voting.votingPower":"ఓటింగ్ పవర్","voting.approve":"ఆమోదం","voting.reject":"తిరస్కారం","voting.comments":"వ్యాఖ్యలు","admin.reliefDashboard":"రిలీఫ్ డ్యాష్‌బోర్డ్","admin.poolBalance":"పూల్ బ్యాలెన్స్","admin.poolUsage":"పూల్ వినియోగం","admin.claimsOverTime":"కాలక్రమంలో క్లెయిమ్స్","admin.daoStats":"DAO గణాంకాలు","admin.txLog":"లావాదేవీల లాగ్","home.tagline":"వ్యవసాయ సముదాయాలు నిర్వహించే వికేంద్రీకృత పంట బీమా నిధి — DAO ఓటింగ్ ద్వారా వేగమైన, పారదర్శక సహాయం (MVP సిమ్యులేషన్).","home.openFarmerDashboard":"రైతు డ్యాష్‌బోర్డ్ తెరవండి","home.openVoterPortal":"DAO ఓటింగ్ పోర్టల్ తెరవండి","home.openAdminDashboard":"అడ్మిన్ డ్యాష్‌బోర్డ్ తెరవండి","home.feature.stake.title":"స్టేక్ → ఓటింగ్ పవర్","home.feature.stake.body":"ఓటింగ్ పవర్ పొందడానికి పూల్‌లో స్టేక్ చేసి, సమాజం త్వరగా సహాయం ఆమోదించేందుకు తోడ్పడండి.","home.feature.claims.title":"క్లెయిమ్స్ + ఫోటో ఆధారం","home.feature.claims.body":"రైతులు ఆధారాలతో క్లెయిమ్స్ సమర్పిస్తారు. DAO పారదర్శకంగా ఓటేస్తుంది; సిమ్యులేటెడ్ ఆన్-చైన్ లాగ్‌తో.","home.feature.analytics.title":"రిలీఫ్ విశ్లేషణ","home.feature.analytics.body":"పూల్ వినియోగం, ప్రాంతీయ క్లెయిమ్ క్లస్టర్లు, మరియు వాస్తవ వినియోగానికి స్పందన మెట్రిక్స్‌ను అడ్మిన్ చూడగలరు.","home.demoTip":"డెమో టిప్: రిజిస్టర్ పేజీ నుంచి రైతు, ఓటర్, అడ్మిన్ అకౌంట్లు సృష్టించండి (డెవ్‌లో రోల్ సెలెక్షన్ ఎనేబుల్).","common.loading":"లోడ్ అవుతోంది...","common.refresh":"రిఫ్రెష్","common.submit":"సబ్మిట్","common.send":"పంపండి","pool.balance":"పూల్ బ్యాలెన్స్","pool.stake":"స్టేక్","pool.totalStaked":"మొత్తం స్టేక్","farmer.coverage.high":"హై కవరేజ్","farmer.coverage.standard":"స్టాండర్డ్ కవరేజ్","farmer.coverage.basic":"బేసిక్ కవరేజ్","farmer.coverage.notStaked":"స్టేక్ చేయలేదు","farmer.staked":"స్టేక్","farmer.stakeTargetMaxCoverage":"గరిష్ట కవరేజ్ కోసం స్టేక్ లక్ష్యం","claim.region":"ప్రాంతం","claim.crop":"పంట","claim.requestedAmount":"అభ్యర్థించిన మొత్తం","claim.evidencePhoto":"ఆధార ఫోటో","claim.notesOptional":"గమనికలు (ఐచ్ఛికం)","claim.damageDetailsPlaceholder":"నష్టం వివరాలు...","claim.photo":"ఫోటో","claim.farmer":"రైతు","claims.empty":"ఇంకా క్లెయిమ్స్ లేవు.","claims.submitted":"సమర్పించిన సమయం","claims.nonePending":"పెండింగ్ క్లెయిమ్స్ లేవు.","comments.empty":"ఇంకా వ్యాఖ్యలు లేవు.","comments.addPlaceholder":"వ్యాఖ్య జోడించండి...","voting.votingPowerDescription":"స్టేక్ ఆధారిత ఓటింగ్ పవర్ (లీనియర్ MVP).","voting.totalPower":"మొత్తం పవర్","admin.activeVoters":"సక్రియ ఓటర్లు","admin.avgResponseHours":"సగటు స్పందన (గంటలు)","admin.totalClaims":"మొత్తం క్లెయిమ్స్","admin.regionalClaimsMap":"ప్రాంతీయ క్లెయిమ్స్ మ్యాప్","tx.empty":"ఇంకా లావాదేవీలు లేవు.","auth.emailPlaceholder":"you@example.com","auth.namePlaceholder":"మీ పేరు","auth.loginFailed":"లాగిన్ విఫలమైంది","auth.registerFailed":"రిజిస్టర్ విఫలమైంది","auth.alreadyHaveAccount":"ఇప్పటికే ఖాతా ఉందా?","auth.roleDevOnlyNote":"రోల్ సెలెక్షన్ డెవ్‌లో మాత్రమే; ప్రొడక్షన్‌లో డిఫాల్ట్‌గా రైతు.","roles.farmer":"రైతు","roles.voter":"ఓటర్","roles.admin":"అడ్మిన్"}');
+
+/***/ })
+
+});
